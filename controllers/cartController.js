@@ -43,7 +43,7 @@ const deleteCart = async (req, res) => {
 
         delete cartData[req.body.itemId]
 
-        await userModel.findByIdAndUpdate(userId, { cartData: cartData });
+        await userModel.findByIdAndUpdate(req.body.userId, { cartData: cartData });
         res.json({success:true, message:"Delete from cart"})
     } catch(error) {
         console.log(error)
