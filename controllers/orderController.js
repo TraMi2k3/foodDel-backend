@@ -7,7 +7,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY)
 
 // placing user order for fontend
 const placeOrder = async (req, res) => {
-    const fontend_url = 'http://localhost:3000';
+    const fontend_url = 'https://food-delivery-a6ao.onrender.com';
 
     try {
         const newOrder = new orderModel({
